@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# Solana Wallet DApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A decentralized application (DApp) built on Solana, allowing users to request airdrops, check their SOL balance, send tokens, and sign messages.
 
-Currently, two official plugins are available:
+![Solana Wallet DApp](/public/screen.png) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Request Airdrop**: Get SOL tokens from the Solana testnet.
+- **Show Balance**: Check the current SOL balance in your wallet.
+- **Send Tokens**: Transfer SOL tokens to any recipient address.
+- **Sign Message**: Sign messages with your wallet for verification.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**: React,Tailwind CSS
+- **Blockchain**: Solana, Wallet Adapter
+- **Languages**: TypeScript, JavaScript
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   git clone https://github.com/iamnas/Solana-Wallet-DApp.git
+   cd Solana-Wallet-DApp
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`.
+
+## Usage
+
+1. Connect your wallet using the Solana Wallet Adapter.
+2. Use the interface to:
+   - Request SOL tokens from the testnet faucet.
+   - View your SOL balance.
+   - Send SOL to other addresses.
+   - Sign a message for verification.
+
+## Contributing
+
+Feel free to submit issues or pull requests if you find any bugs or have suggestions for improvements!
+
+## License
+
+This project is licensed under the MIT License.
